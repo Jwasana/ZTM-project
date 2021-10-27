@@ -1,9 +1,10 @@
 import React from "react";
+import "./Hompage.scss";
 
 const Homepage = () => {
   return (
     <div className="homepage">
-      <div className="directori-menu">
+      <div className="directory-menu">
         <div className="menu-item">
           <div className="content">
             <h1 className="title">HATS</h1>
@@ -32,7 +33,7 @@ const Homepage = () => {
         <div className="menu-item">
           <div className="content">
             <h1 className="title">WOMENS</h1>
-            <span className="sub=title">Shop NOW</span>
+            <span className="sub-title">Shop NOW</span>
           </div>
         </div>
       </div>
