@@ -1,8 +1,13 @@
 import React from "react";
-import "./App.css";
+import Homepage from "./HomepageComponent";
 
 function App() {
-  return <div></div>;
+  return (
+    <div>
+      Welcome to dream clothing store!😍
+      <Homepage />
+    </div>
+  );
 }
 
 export default App;
