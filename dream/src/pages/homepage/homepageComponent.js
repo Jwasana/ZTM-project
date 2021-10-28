@@ -1,16 +1,11 @@
 import React from "react";
 import "./Hompage.scss";
-
+import MenuItem from "../../components/menu-item/MenuItemComponent";
 const Homepage = () => {
   return (
     <div className="homepage">
       <div className="directory-menu">
-        <div className="menu-item">
-          <div className="content">
-            <h1 className="title">HATS</h1>
-            <span className="sub=title">Shop NOW</span>
-          </div>
-        </div>
+        <MenuItem title="HATS" />
         <div className="menu-item">
           <div className="content">
             <h1 className="title">JACKET</h1>
