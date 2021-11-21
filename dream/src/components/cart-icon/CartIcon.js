@@ -5,13 +5,19 @@ import { CartToggeleHidden } from "../../redux/cart/CartActions";
 
 import "./CartIcon-style.scss";
 
-const CartIcon = ({ CartToggeleHidden }) => (
+const CartIcon = ({ CartToggeleHidden, itemCount }) => (
   <div className="cart-icon" onClick={CartToggeleHidden}>
     <ShoppingIcon className="shoping-icon" />
-    <span className="item-count">0</span>
+    <span className="item-count">{itemCount}</span>
   </div>
 );
 const mapDispachToPrps = (dispatch) => ({
   CartToggeleHidden: () => dispatch(CartToggeleHidden()),
 });
-export default connect(null, mapDispachToPrps)(CartIcon);
+const mapStateToProps = ({ cart: { cartItems } }) => ({
+  itemCount: cartItems.reduce(
+    (accumilatedQuantity, cartItem) => accumilatedQuantity + cartItem.quantity,
+    0
+  ),
+});
+export default connect(mapStateToProps, mapDispachToPrps)(CartIcon);
